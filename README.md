@@ -17,6 +17,15 @@
 
 This project uses Nx as a monorepo tool. If you want to run Nx commands, either use CLI `nx` command or VScode "Nx console" extension (highly recommended).
 
+```bash
+# Show Nx project/task graphs via web UI
+pnpm exec nx graph
+
+# Show affected projects for a specific target via web UI
+npx nx affected -t build --graph --base=HEAD
+# Or use Nx Console extension -> "affected --graph" command
+```
+
 ### Run the whole stack
 
 Make sure setup is completed and is up-to-date.
