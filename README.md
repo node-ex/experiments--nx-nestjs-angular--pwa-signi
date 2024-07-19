@@ -102,8 +102,8 @@ pnpm exec nx run-many --target=type-check
 pnpm exec tsc --build --incremental ./tsconfig.root.json
 
 # Use type-checking (side-effect of the composite build) only for affected projects (useful for CI)
-pnpm exec nx affected -t type-check --base=develop
-pnpm exec nx affected -t type-check --base=develop --head=HEAD
+pnpm exec nx affected -t type-check --base=main
+pnpm exec nx affected -t type-check --base=main --head=HEAD
 pnpm exec nx affected -t type-check --base=HEAD
 ```
 
@@ -137,9 +137,33 @@ pnpm exec eslint --config .eslintrc.root.js --ext .js,.cjs,.mjs,.ts --max-warnin
 pnpm exec eslint --config .eslintrc.root.js --ext .js,.cjs,.mjs,.ts --max-warnings 0 --fix .
 
 # Run lint checking only for affected projects (useful for CI)
-pnpm exec nx affected -t lint --base=develop
-pnpm exec nx affected -t lint --base=develop --head=HEAD
+pnpm exec nx affected -t lint --base=main
+pnpm exec nx affected -t lint --base=main --head=HEAD
 pnpm exec nx affected -t lint --base=HEAD
 ```
 
-VSCode "ESLint" extension is recommended to lint files. See example `.vscode/settings.json.example` for recommended settings.
+VSCode "ESLint" extension is recommended to lint files. See example `.vscode/settings.template.json` for recommended settings.
+
+### Testing
+
+#### Unit tests
+
+Unit tests are run using Jest. To run them, either use commands from `package.json` or Nx commands.
+
+```bash
+# Run tests for a single app
+pnpm exec nx test app-nest-1
+
+# Run tests for all apps
+pnpm exec nx run-many -t test
+
+# Run tests for multiple apps
+pnpm exec nx run-many -t test -p app-nest-1 app-angular-1
+
+# Run unit tests only for affected projects (useful for CI)
+pnpm exec nx affected -t test --base=main
+pnpm exec nx affected -t test --base=main --head=HEAD
+pnpm exec nx affected -t test --base=HEAD
+```
+
+VSCode "Jest" and/or "Jest Runner" extensions are recommended to run the tests. See example `.vscode/settings.template.json` for recommended settings.
