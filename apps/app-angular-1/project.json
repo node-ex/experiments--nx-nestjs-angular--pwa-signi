@@ -79,6 +79,12 @@
       "options": {
         "jestConfig": "apps/app-angular-1/jest.config.ts"
       }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --build --incremental {projectRoot}/tsconfig.json"
+      }
     }
   }
 }

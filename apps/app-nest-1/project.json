@@ -19,6 +19,12 @@
           "buildTarget": "app-nest-1:build:production"
         }
       }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --build --incremental {projectRoot}/tsconfig.json"
+      }
     }
   }
 }
