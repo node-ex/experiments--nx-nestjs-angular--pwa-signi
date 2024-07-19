@@ -6,8 +6,10 @@
   "private": true,
   "devDependencies": {
     "@angular-devkit/core": "~18.1.0",
+    "@nestjs/schematics": "^10.0.1",
     "@nx/angular": "19.5.1",
     "@nx/js": "19.5.1",
+    "@nx/nest": "19.5.1",
     "@nx/workspace": "19.5.1",
     "nx": "19.5.1"
   },
