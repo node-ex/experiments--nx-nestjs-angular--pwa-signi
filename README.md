@@ -106,3 +106,40 @@ pnpm exec nx affected -t type-check --base=develop
 pnpm exec nx affected -t type-check --base=develop --head=HEAD
 pnpm exec nx affected -t type-check --base=HEAD
 ```
+
+## Linting
+
+We use ESLint to lint the code. To run it, use `lint*` commands from `package.json` or Nx commands. Put file paths and patterns to ignore into `.eslintignore`.
+
+```bash
+# Run lint checking for a single project
+pnpm exec nx run app-nest-1:lint
+
+# Fix auto-fixable lint errors for a single project
+pnpm exec nx run app-nest-1:lint --fix=true
+
+# Run lint checking for all project files only (inside of `./apps` and `./libs`)
+pnpm exec nx run-many --target=lint --all=true
+
+# Fix auto-fixable lint errors in files of all projects only (inside of `./apps` and `./libs`)
+pnpm exec nx run-many --target=lint --all=true --fix=true
+
+# Run lint checking for specific projects
+pnpm exec nx run-many --target=lint --projects=app-nest-1,app-angular-1
+
+# Run lint checking in specific folder only (does not work in @nx/eslint v19.5.1)
+pnpm exec nx run app-nest-1:lint --lintFilePatterns 'apps/app-nest-1/src/**/*'
+
+# Run lint checking for files outside of Nx projects (outside of `./apps` and `./libs`)
+pnpm exec eslint --config .eslintrc.root.js --ext .js,.cjs,.mjs,.ts --max-warnings 0 .
+
+# Fix linting errors in files outside of Nx projects (outside of `./apps` and `./libs`)
+pnpm exec eslint --config .eslintrc.root.js --ext .js,.cjs,.mjs,.ts --max-warnings 0 --fix .
+
+# Run lint checking only for affected projects (useful for CI)
+pnpm exec nx affected -t lint --base=develop
+pnpm exec nx affected -t lint --base=develop --head=HEAD
+pnpm exec nx affected -t lint --base=HEAD
+```
+
+VSCode "ESLint" extension is recommended to lint files. See example `.vscode/settings.json.example` for recommended settings.
