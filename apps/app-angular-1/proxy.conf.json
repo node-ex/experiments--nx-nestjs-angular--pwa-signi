@@ -1,0 +1,6 @@
+{
+  "/app-nest-1": {
+    "target": "http://localhost:3333",
+    "secure": false
+  }
+}
