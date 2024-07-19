@@ -56,27 +56,53 @@ We use Prettier to format the code. To run it, use `format*` commands from `pack
 
 ```bash
 # Run format checking for a single project
-npx nx format:check --projects app-nest-1
+pnpm exec nx format:check --projects app-nest-1
 
 # Run format fixing for a single project
-npx nx format:write --projects app-nest-1
+pnpm exec nx format:write --projects app-nest-1
 
 # Run format checking for all non-ignored files in the repository
-npx nx format:check --all
+pnpm exec nx format:check --all
 
 # Run format checking for all project files only (inside of `./apps` and `./libs`)
-npx nx format:check --libs-and-apps
+pnpm exec nx format:check --libs-and-apps
 
 # Run format checking for files outside of Nx projects (outside of `./apps` and `./libs`)
-npx prettier --check . '!./apps' '!./libs'
+pnpm exec prettier --check . '!./apps' '!./libs'
 
 # Run format fixing for files outside of Nx projects (outside of `./apps` and `./libs`)
-npx prettier --write . '!./apps' '!./libs'
+pnpm exec prettier --write . '!./apps' '!./libs'
 
 # Run format checking only for affected projects (useful for CI)
-npx nx format:check --base=main
-npx nx format:check --base=main --head=HEAD
-npx nx format:check --base=HEAD
+pnpm exec nx format:check --base=main
+pnpm exec nx format:check --base=main --head=HEAD
+pnpm exec nx format:check --base=HEAD
 ```
 
 VSCode "Prettier" extension is recommended to format files on save. See example `.vscode/settings.template.json` for recommended settings.
+
+## Type checking
+
+We use `tsc` for type checking. To run it, use `type-check*` commands from `package.json` or Nx commands. Put file paths and patterns to ignore into an appropriate `tsconfig*.json` file.
+
+```bash
+# Use type-checking (side-effect of the composite build) for a single project (recommended)
+# https://github.com/nrwl/nx/issues/3664#issuecomment-731918931
+pnpm exec nx run app-nest-1:type-check
+# For prettier output
+pnpm exec tsc --build --incremental ./apps/app-nest-1/tsconfig.json
+
+# Type check a single project (does not work well)
+pnpm exec tsc -p ./apps/app-nest-1/tsconfig.json
+
+# Use type-checking (side-effect of the composite build) for all projects
+pnpm exec nx run-many --target=type-check
+
+# Use type-checking (side-effect of the composite build) for files outside of Nx projects (outside of `./apps` and `./libs`)
+pnpm exec tsc --build --incremental ./tsconfig.root.json
+
+# Use type-checking (side-effect of the composite build) only for affected projects (useful for CI)
+pnpm exec nx affected -t type-check --base=develop
+pnpm exec nx affected -t type-check --base=develop --head=HEAD
+pnpm exec nx affected -t type-check --base=HEAD
+```
