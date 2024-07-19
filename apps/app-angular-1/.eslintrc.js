@@ -6,9 +6,17 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts'],
+      // We set parserOptions.project for the project to allow TypeScript to create the type-checker behind the scenes when we run linting
+      // https://nx.dev/recipes/tips-n-tricks/eslint
+      parserOptions: {
+        project: ['apps/app-angular-1/tsconfig.*?.json'],
+      },
       extends: [
         'plugin:@nx/angular',
         'plugin:@angular-eslint/template/process-inline-templates',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
+        'plugin:@nx/typescript',
       ],
       rules: {
         '@angular-eslint/directive-selector': [
@@ -27,6 +35,7 @@ module.exports = {
             style: 'kebab-case',
           },
         ],
+        '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
     {
