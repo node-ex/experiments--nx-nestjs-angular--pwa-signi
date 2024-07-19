@@ -1,6 +1,6 @@
-# Add files here to ignore them from prettier formatting
+node_modules
+.git
 /dist
 /coverage
-/.nx/cache
-/.nx/workspace-data
+/.nx
 .angular
