@@ -83,7 +83,7 @@
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tsc --build --incremental {projectRoot}/tsconfig.json"
+        "command": "tsc --build --incremental {projectRoot}/tsconfig.app.json"
       }
     }
   }
