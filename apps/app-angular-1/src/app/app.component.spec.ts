@@ -15,7 +15,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome app-angular-1'
+      'Welcome app-angular-1',
     );
   });
 
