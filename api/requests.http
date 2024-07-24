@@ -1,1 +1,19 @@
-GET http://localhost:3000/api/signi
+GET http://localhost:3000/api
+
+###
+
+# Using ngrok tunnel
+GET https://88ea-2a01-4f8-1c1c-92b7-00-1.ngrok-free.app/api
+
+###
+
+POST http://localhost:3000/api/signi/contract
+
+###
+
+POST http://localhost:3000/api/signi/contract/callback
+Content-Type: application/json
+
+{
+  "someProperty": "someValue"
+}
