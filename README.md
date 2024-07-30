@@ -1,4 +1,24 @@
-# nestjs-angular-nx--template--basic
+# experiments--nestjs-angular-nx--signi
+
+## Experiments
+
+Steps:
+
+1. Setup the repository (see below)
+2. Start NestJS and Angular development servers (Angular app with proxy `/api` requests to NestJS)
+3. Use to `http://localhost:4200` to access both FE and BE
+4. Use requests from `./api/requests.http` with VSCode REST Client extension or other HTTP client
+   1. Change the the port or URL depending if needed
+
+### Testing with webhooks
+
+Use a tool similar to ngrok to expose the local server to the internet.
+
+```
+ngrok http 4200
+```
+
+Then, open the ngrok URL on a mobile device (real or emulated, e.g. using Android Studio).
 
 ## Local development
 
