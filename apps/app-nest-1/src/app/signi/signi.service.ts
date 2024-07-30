@@ -97,6 +97,9 @@ export class SigniService {
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await response.json();
-    console.log(JSON.stringify(result, null, 2));
+    // console.log(JSON.stringify(result, null, 2));
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return result;
   }
 }

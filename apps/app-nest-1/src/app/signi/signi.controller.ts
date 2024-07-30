@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Post, Query } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, Query } from '@nestjs/common';
 import { SigniService } from './signi.service';
 
 @Controller('signi')
