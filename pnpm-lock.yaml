@@ -29,6 +29,9 @@ importers:
       '@angular/platform-browser-dynamic':
         specifier: ~18.1.0
         version: 18.1.1(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/compiler@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(@angular/platform-browser@18.1.1(@angular/animations@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))
+      '@angular/pwa':
+        specifier: ^18.1.2
+        version: 18.1.2(@angular/cli@18.1.1(chokidar@3.6.0))(chokidar@3.6.0)
       '@angular/router':
         specifier: ~18.1.0
         version: 18.1.1(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(@angular/platform-browser@18.1.1(@angular/animations@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(rxjs@7.8.1)
@@ -293,6 +296,15 @@ packages:
       chokidar:
         optional: true
 
+  '@angular-devkit/core@18.1.2':
+    resolution: {integrity: sha512-WYkdKT/Ime5seBX7S7S4aWQbgCG5U3otCvAg/XiMn6scexTo3EZe2jrJl8nxGGFHNWrePoD86LvJOxhnCkEKEA==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+    peerDependencies:
+      chokidar: ^3.5.2
+    peerDependenciesMeta:
+      chokidar:
+        optional: true
+
   '@angular-devkit/schematics@16.0.1':
     resolution: {integrity: sha512-A9D0LTYmiqiBa90GKcSuWb7hUouGIbm/AHbJbjL85WLLRbQA2PwKl7P5Mpd6nS/ZC0kfG4VQY3VOaDvb3qpI9g==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -303,6 +315,10 @@ packages:
 
   '@angular-devkit/schematics@18.1.1':
     resolution: {integrity: sha512-r+DAvVvv+hOuhh19PefPOKa/zDkvzLHz/YOLGq/k1KfJRtNtjCKiDsXp1s6HSzYdJD1H10wnzUIh48uvxfwH5Q==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+
+  '@angular-devkit/schematics@18.1.2':
+    resolution: {integrity: sha512-v8aCJ1tPPzXsdiCoZxkc6YzLGhzJgC/6QauT03/Z6wWo8uI6DKibQQwQBawRE5FN5lKDpuGlNDv40EDtVYkQSA==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
 
   '@angular-eslint/bundled-angular-compiler@18.1.0':
@@ -434,6 +450,15 @@ packages:
       '@angular/core': 18.1.1
     peerDependenciesMeta:
       '@angular/animations':
+        optional: true
+
+  '@angular/pwa@18.1.2':
+    resolution: {integrity: sha512-D6lW+gXPJcxsDY4GomXSPQ55S3KMHVWj3baSYDfQZOZ+AfZ6JmdyVDeGAN4GSS/JS8Rbvo/jfHE7B7CZ6FKveQ==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+    peerDependencies:
+      '@angular/cli': ^18.0.0
+    peerDependenciesMeta:
+      '@angular/cli':
         optional: true
 
   '@angular/router@18.1.1':
@@ -2059,6 +2084,10 @@ packages:
 
   '@schematics/angular@18.1.1':
     resolution: {integrity: sha512-6nQUSuFSP7un5Bmm6/MpQXq3jnkdEYg2MUPv7JStsqnT1YYzUsDjkUv7Hsci0xQmeUAzVz3ueg4znviJoQxWdg==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
+
+  '@schematics/angular@18.1.2':
+    resolution: {integrity: sha512-lTY9twQ30vEm3hjArUKQjKiYlbDUOHqbyY7MlynY5+T8XtYreMo20KHofxv5t5xZfPwj1z6/ppcMU2xZ4WbGUA==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
 
   '@sigstore/bundle@2.3.2':
@@ -6880,6 +6909,17 @@ snapshots:
     optionalDependencies:
       chokidar: 3.6.0
 
+  '@angular-devkit/core@18.1.2(chokidar@3.6.0)':
+    dependencies:
+      ajv: 8.16.0
+      ajv-formats: 3.0.1(ajv@8.16.0)
+      jsonc-parser: 3.3.1
+      picomatch: 4.0.2
+      rxjs: 7.8.1
+      source-map: 0.7.4
+    optionalDependencies:
+      chokidar: 3.6.0
+
   '@angular-devkit/schematics@16.0.1(chokidar@3.6.0)':
     dependencies:
       '@angular-devkit/core': 16.0.1(chokidar@3.6.0)
@@ -6903,6 +6943,16 @@ snapshots:
   '@angular-devkit/schematics@18.1.1(chokidar@3.6.0)':
     dependencies:
       '@angular-devkit/core': 18.1.1(chokidar@3.6.0)
+      jsonc-parser: 3.3.1
+      magic-string: 0.30.10
+      ora: 5.4.1
+      rxjs: 7.8.1
+    transitivePeerDependencies:
+      - chokidar
+
+  '@angular-devkit/schematics@18.1.2(chokidar@3.6.0)':
+    dependencies:
+      '@angular-devkit/core': 18.1.2(chokidar@3.6.0)
       jsonc-parser: 3.3.1
       magic-string: 0.30.10
       ora: 5.4.1
@@ -7074,6 +7124,16 @@ snapshots:
       tslib: 2.6.3
     optionalDependencies:
       '@angular/animations': 18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))
+
+  '@angular/pwa@18.1.2(@angular/cli@18.1.1(chokidar@3.6.0))(chokidar@3.6.0)':
+    dependencies:
+      '@angular-devkit/schematics': 18.1.2(chokidar@3.6.0)
+      '@schematics/angular': 18.1.2(chokidar@3.6.0)
+      parse5-html-rewriting-stream: 7.0.0
+    optionalDependencies:
+      '@angular/cli': 18.1.1(chokidar@3.6.0)
+    transitivePeerDependencies:
+      - chokidar
 
   '@angular/router@18.1.1(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(@angular/platform-browser@18.1.1(@angular/animations@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(@angular/common@18.1.1(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8))(rxjs@7.8.1))(@angular/core@18.1.1(rxjs@7.8.1)(zone.js@0.14.8)))(rxjs@7.8.1)':
     dependencies:
@@ -10128,6 +10188,14 @@ snapshots:
     dependencies:
       '@angular-devkit/core': 18.1.1(chokidar@3.6.0)
       '@angular-devkit/schematics': 18.1.1(chokidar@3.6.0)
+      jsonc-parser: 3.3.1
+    transitivePeerDependencies:
+      - chokidar
+
+  '@schematics/angular@18.1.2(chokidar@3.6.0)':
+    dependencies:
+      '@angular-devkit/core': 18.1.2(chokidar@3.6.0)
+      '@angular-devkit/schematics': 18.1.2(chokidar@3.6.0)
       jsonc-parser: 3.3.1
     transitivePeerDependencies:
       - chokidar
@@ -15173,6 +15241,17 @@ snapshots:
     optionalDependencies:
       webpack: 5.92.1(@swc/core@1.5.29(@swc/helpers@0.5.12))(esbuild@0.21.5)(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.93.0))
 
+  webpack-dev-middleware@7.2.1(webpack@5.93.0(@swc/core@1.5.29(@swc/helpers@0.5.12))(webpack-cli@5.1.4)):
+    dependencies:
+      colorette: 2.0.20
+      memfs: 4.9.3
+      mime-types: 2.1.35
+      on-finished: 2.4.1
+      range-parser: 1.2.1
+      schema-utils: 4.2.0
+    optionalDependencies:
+      webpack: 5.93.0(@swc/core@1.5.29(@swc/helpers@0.5.12))(webpack-cli@5.1.4)
+
   webpack-dev-server@4.15.2(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.93.0))(webpack@5.93.0(@swc/core@1.5.29(@swc/helpers@0.5.12))(webpack-cli@5.1.4)):
     dependencies:
       '@types/bonjour': 3.5.13
@@ -15244,7 +15323,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.2.1(webpack@5.92.1(@swc/core@1.5.29(@swc/helpers@0.5.12))(esbuild@0.21.5)(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.93.0)))
+      webpack-dev-middleware: 7.2.1(webpack@5.93.0(@swc/core@1.5.29(@swc/helpers@0.5.12))(webpack-cli@5.1.4))
       ws: 8.18.0
     optionalDependencies:
       webpack: 5.92.1(@swc/core@1.5.29(@swc/helpers@0.5.12))(esbuild@0.21.5)(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.93.0))

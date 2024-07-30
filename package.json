@@ -61,6 +61,7 @@
     "@angular/forms": "~18.1.0",
     "@angular/platform-browser": "~18.1.0",
     "@angular/platform-browser-dynamic": "~18.1.0",
+    "@angular/pwa": "^18.1.2",
     "@angular/router": "~18.1.0",
     "@nestjs/common": "^10.0.2",
     "@nestjs/config": "^3.2.3",
