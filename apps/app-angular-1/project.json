@@ -5,22 +5,16 @@
   "prefix": "app",
   "sourceRoot": "apps/app-angular-1/src",
   "tags": [],
-  "implicitDependencies": [
-    "app-nest-1"
-  ],
+  "implicitDependencies": ["app-nest-1"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/app-angular-1",
         "index": "apps/app-angular-1/src/index.html",
         "browser": "apps/app-angular-1/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/app-angular-1/tsconfig.app.json",
         "assets": [
           {
@@ -28,9 +22,7 @@
             "input": "apps/app-angular-1/public"
           }
         ],
-        "styles": [
-          "apps/app-angular-1/src/styles.css"
-        ],
+        "styles": ["apps/app-angular-1/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -47,8 +39,7 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all",
-          "serviceWorker": "apps/app-angular-1/ngsw-config.json"
+          "outputHashing": "all"
         },
         "development": {
           "optimization": false,
@@ -84,9 +75,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/app-angular-1/jest.config.ts"
       }
