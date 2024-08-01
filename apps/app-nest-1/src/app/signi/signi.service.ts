@@ -63,6 +63,7 @@ export class SigniService {
           },
         ],
       },
+      url_redirect: webhookUrl,
       webhooks: [
         {
           state: 'completed',
