@@ -19,7 +19,24 @@ export class SigniController {
     console.log(
       'SigniController.callback query',
       JSON.stringify(query, null, 2),
+      /**
+       * {
+       *   "state": "completed",
+       *   "someQueryParam": "someValue"
+       * }
+       */
     );
-    console.log('SigniController.callback body', JSON.stringify(body, null, 2));
+    console.log(
+      'SigniController.callback body',
+      JSON.stringify(body, null, 2),
+      /**
+       * {
+       *   "contract_id": 123456,
+       *   "state": "completed",
+       *   "file": "https://api.signi.com/api/v1/contract/pdf/preview?hash=mock-hash",
+       *   "attachments": []
+       * }
+       */
+    );
   }
 }
