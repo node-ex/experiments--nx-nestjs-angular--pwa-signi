@@ -26,8 +26,8 @@ export class SigniService {
         id: process.env['SIGNI_TEMPLATE_ID'],
         parameters: [
           {
-            id: 'id',
-            value: 'mock-id',
+            id: 'contractID',
+            value: 'mock-contract-id',
           },
           {
             id: 'name',
@@ -48,6 +48,10 @@ export class SigniService {
           {
             id: 'phoneNumber',
             value: process.env['SIGNI_SIGNER_PHONE_NUMBER'],
+          },
+          {
+            id: 'healthInsurance',
+            value: 'mock-health-insurance',
           },
           {
             id: 'price',
